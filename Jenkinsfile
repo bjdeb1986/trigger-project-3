@@ -11,11 +11,15 @@ pipeline{
         timestamps()
     }
     stages{
-        stage('Test'){
+        stage('Stage-1'){
             steps{
                 sh 'sleep 2'
-                sh 'echo Hello World'
+                sh 'echo Hello from stage-1'
             }
+        }
+        stage('Stage-2'){
+        	sh 'sleep 2'
+		sh 'echo Hello from stage-2'
         }
     }
 }
