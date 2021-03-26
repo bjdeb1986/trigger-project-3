@@ -18,8 +18,10 @@ pipeline{
             }
         }
         stage('Stage-2'){
+            steps{
         	sh 'sleep 2'
 		sh 'echo Hello from stage-2'
+            }
         }
     }
 }
